@@ -20,16 +20,17 @@ header{
 	margin: 0px;
 }
 
+.area-principal{
+	width: 75%;
+	margin: 0px auto;
+	position: relative;
+}
+
 aside{
 	position: absolute;
 	margin-top: 40px;
 	padding: 5px;
 	border: 1px solid grey;
-}
-
-.area-principal{
-	width: 75%;
-	margin: 0px auto;
 }
 
 .busca-rapida{
@@ -40,4 +41,10 @@ aside{
 .busca-detalhada{
 	border: 1px solid grey;
 	margin: 3px;
+}
+
+.conteudo-principal{
+	border: red 1px solid;
+	float: right;
+	margin-top: 40px;
 }
