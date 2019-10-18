@@ -1,0 +1,43 @@
+header{
+	border: 1px solid black;
+	width: 100%;
+	position: fixed;
+}
+
+.area{
+	width: 75%;
+	margin: 0px auto;
+}
+
+#links-cabecalho{
+	float: right;
+	padding: 10px;
+}
+
+#logo-cabecalho{
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+
+aside{
+	position: absolute;
+	margin-top: 40px;
+	padding: 5px;
+	border: 1px solid grey;
+}
+
+.area-principal{
+	width: 75%;
+	margin: 0px auto;
+}
+
+.busca-rapida{
+	border: 1px solid grey;
+	margin: 3px;
+}
+
+.busca-detalhada{
+	border: 1px solid grey;
+	margin: 3px;
+}
