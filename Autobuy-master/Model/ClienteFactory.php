@@ -9,7 +9,7 @@ class clienteFactory
     {
 
         // Create (connect to) SQLite database in file
-        $this->file_db = new PDO('sqlite:C:\wamp\www\Autobuy - PROJETO\Autobuy-master\Model\DBAutobuy.sqlite');//muda aqui se quiser acessar teu bd
+        $this->file_db = new PDO('sqlite:C:\wamp\www\Autobuy\Autobuy-master\Model\DBAutobuy.sqlite');//muda aqui se quiser acessar teu bd
 
         // Set errormode to exceptions
         $this->file_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

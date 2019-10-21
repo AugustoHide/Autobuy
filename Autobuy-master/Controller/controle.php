@@ -57,7 +57,7 @@ class controler
                 require 'View/mostra.php';
                 break;
             default:
-                require 'View/index.php';
+                require 'View/paginaPrincipal.php';
                 break;
         }
 
