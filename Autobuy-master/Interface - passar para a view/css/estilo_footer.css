@@ -1,0 +1,11 @@
+footer{
+	border: 1px solid yellow;
+	width: 75%;
+	margin: 0px auto;
+	padding: 10000px;
+	position: relative;
+}
+
+.conteudo-rodape{
+	padding: 1000px;
+}

@@ -1,50 +1,44 @@
-header{
-	border: 1px solid black;
-	width: 100%;
-	position: fixed;
-}
-
-.area{
-	width: 75%;
-	margin: 0px auto;
-}
-
-#links-cabecalho{
-	float: right;
-	padding: 10px;
-}
-
-#logo-cabecalho{
-	float: left;
-	padding: 0px;
+body{
 	margin: 0px;
+	background: linear-gradient( to bottom, #0000FF, #ADD8E6);
+	font-family: sans-serif;
+	clear: both;
 }
 
-.area-principal{
-	width: 75%;
-	margin: 0px auto;
-	position: relative;
+label{
+	margin: 2px; 
 }
 
-aside{
-	position: absolute;
-	margin-top: 40px;
-	padding: 5px;
-	border: 1px solid grey;
+input{
+	margin: 2px;
 }
 
-.busca-rapida{
-	border: 1px solid grey;
+.clear{
+	clear: both;
+}
+
+a{
+	text-decoration: none;
 	margin: 3px;
+	padding: 3px;
+	text-decoration: 
+}
+a:link{
+	color: black;
+}
+a:visited{
+	color: black;
+}
+a:hover{
+	color: white;
+	background-color: black;
+
+}
+a:active{
+	color: black;
 }
 
-.busca-detalhada{
-	border: 1px solid grey;
-	margin: 3px;
-}
 
-.conteudo-principal{
-	border: red 1px solid;
-	float: right;
-	margin-top: 40px;
-}
+
+
+
