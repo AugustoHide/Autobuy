@@ -1,14 +1,9 @@
 footer{
-	border: 1px solid yellow;
-	width: 75%;
-	margin: 100px auto;
-	padding: 10px;
-	position: relative;
 	border: 5px solid pink;
-	z-index: 3;
+	background: white;
 }
 
 .conteudo-rodape{
-	padding: 1000px;
 	border: 5px solid pink;
+	background: black;
 }

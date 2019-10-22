@@ -1,29 +1,31 @@
 .area-principal{
 	margin: 0px auto;
-	position: relative;
 }
 
 aside{
 	float: left;
-	margin-top: 100px;
-	padding: 5px;
-	border: 1px solid grey;
-	width: 200px;
-	background-color: white;
-	box-shadow: 0px 0px 4px grey;
 	position: absolute;
 }
 
+.aside{
+	padding: 10px;
+	border: 1px solid grey;
+	box-shadow: 0px 0px 8px black;
+	background-color: white;
+	margin-top: 100px;
+}
+
 .busca-rapida{
-	margin: 3px 3px 7px 3px;
 	background-color: #DCDCDC;
-	box-shadow: 0px 0px 2px grey;
+	box-shadow: 0px 0px 5px grey;
+	padding-bottom: 1px;
+	margin-bottom: 10px;
 }
 
 .busca-detalhada{
-	margin: 3px;
 	background-color: #DCDCDC;
-	box-shadow: 0px 0px 2px grey;
+	box-shadow: 0px 0px 5px grey;
+	padding-bottom: 10px;
 }
 
 
@@ -32,7 +34,7 @@ aside{
 .conteudo-principal{
 	position: absolute;
 	float: right;
-	margin-top: 100px;
+	margin-top: 90px;
 	margin-left: 250px;
 	border: 4px solid green;
 }
@@ -41,7 +43,7 @@ aside{
 	margin: 5px; 
 	float: left;
 	background-color: white;
-	box-shadow: 0px 0px 17px grey;
+	box-shadow: 0px 0px 17px black;
 }
 
 .info-anuncio{
