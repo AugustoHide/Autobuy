@@ -1,18 +1,18 @@
 <?php
 session_start();
 require 'Model/Cliente.php';
-require 'Model/ClienteFactory.php';
+require 'Model/factory.php';
 
 $_GET['insertstatus'] = null;
 
 class controler
 {
     
-    private $clienteFactory;
+    private $factory;
 
     public function __construct()
     {
-        $this->clienteFactory = new clienteFactory();
+        $this->factory = new factory();
         $this->handleRequest();
     }
 
@@ -21,9 +21,13 @@ class controler
         $action = isset($_GET['action']) ? $_GET['action'] : '';
 
         switch ($action) {
-
+            // só para testes
             case 'cadastrar':
                 require 'View/novo.php';
+                break;
+            
+            case 'cadastrar2':
+                require 'View/novoVeiculo.php';
                 break;
 
             case 'realizar-cadastro':
@@ -31,14 +35,17 @@ class controler
                     $_SESSION['status'] = 1;
                 } else {
                     $cliente = new cliente($_POST['nomeCliente'], $_POST['emailCliente']);
-//                    addStatus é o int que o addCliente retorna indicando cod de erro ou sucesso
+                    //addStatus é o int que o addCliente retorna indicando cod de erro ou sucesso
                     // certo = 0 vazio = 1 sql = 2 ja existe = 3
-                    $_SESSION['status'] = $this->clienteFactory->addClientes($cliente);
+                    $_SESSION['status'] = $this->factory->addClientes($cliente);
                 }
                 require 'View/mostra.php';
                 break;
+
+            case 'cadastro-veiculo':
+                break;
             case 'listar':
-                $this->clienteFactory->listarClientes();
+                $this->factory->listarClientes();
                 break;
 
             case 'editar':
@@ -48,12 +55,12 @@ class controler
                 break;
 
             case 'alterar':
-                $_SESSION['status'] = $this->clienteFactory->alterarClientes();
+                $_SESSION['status'] = $this->factory->alterarClientes();
                 require 'View/mostra.php';
                 break;
             case 'remover':
                 $_SESSION['id'] = $_GET['id'];
-                $_SESSION['status'] = $this->clienteFactory->removerClientes();
+                $_SESSION['status'] = $this->factory->removerClientes();
                 require 'View/mostra.php';
                 break;
             default:

@@ -1,6 +1,6 @@
 <?php
 
-class clienteFactory
+class factory
 {
 
     public $file_db;
@@ -14,10 +14,18 @@ class clienteFactory
         // Set errormode to exceptions
         $this->file_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+        // apenas para testes
         $this->file_db->exec("CREATE TABLE IF NOT EXISTS cliente (
                         ID INTEGER PRIMARY KEY AUTOINCREMENT,
-		                email TEXT NOT NULL,
-		                nome TEXT NOT NULL )");
+                        email TEXT NOT NULL,
+                        nome TEXT NOT NULL )");
+        
+        $this->file_db->exec("CREATE TABLE IF NOT EXISTS veiculo (
+                        foto TEXT NOT NULL PRIMARY KEY,
+		                marca TEXT NOT NULL,
+                        ano INTEGER NOT NULL,
+                        cor TEXT NOT NULL,
+                        preco DECIMAL NOT NULL)");
     }
 
     public function __destruct()
@@ -31,7 +39,25 @@ class clienteFactory
             echo $e->getMessage();
         }
     }
+    public function addVeiculo($veiculo){
+        try {
 
+            $insert = "INSERT INTO veiculo (foto, marca, ano, cor, preco)
+                VALUES (:foto, :marca, :ano, :cor, :preco)";
+            $stmt = $this->file_db->prepare($insert);
+            $stmt->bindParam(':foto', $veiculo->foto);
+            $stmt->bindParam(':marca', $veiculo->marca);
+            $stmt->bindParam(':ano', $veiculo->ano);
+            $stmt->bindParam(':cor', $veiculo->cor);
+            $stmt->bindParam(':preco', $veiculo->preco);
+            $stmt->execute();
+            return 0;
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return 2;
+        }
+    }
     public function addClientes($cliente)
     {
         if ($this->buscarClientes($cliente->email) == null) {

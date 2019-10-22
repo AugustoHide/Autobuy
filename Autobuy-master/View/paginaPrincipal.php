@@ -41,6 +41,7 @@
 					<a href="#">Página Principal</a>
 					<a href="#">Comprar</a>
 					<a href="#">Busca Detalhada</a>
+					<a href="index.php?action=cadastrar2">Cadastro de veiculo(teste)</a><br>
 					
 					<span class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login</a>
