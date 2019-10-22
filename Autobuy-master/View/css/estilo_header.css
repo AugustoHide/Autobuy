@@ -1,5 +1,4 @@
 header{
-	border: 5px double black;
 	width: 100%;
 	position: fixed;
 	background-color: yellow;
@@ -12,15 +11,13 @@ header{
 
 #links-cabecalho{
 	float: right;
-	margin: 0px;
+	margin: auto 0px;
 	padding: 10px;
-	border: 4px solid grey;
 }
 
 #logo-cabecalho{
 	float: left;
 	padding: 0px;
-	margin: 0px;
-	border: 4px solid green;
+	margin: auto 0px;
 	alignment-baseline: central;
 }

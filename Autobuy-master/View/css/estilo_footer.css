@@ -1,9 +1,16 @@
-footer{
-	border: 5px solid pink;
-	background: white;
+.footer{
+	position: relative;
+
 }
 
 .conteudo-rodape{
-	border: 5px solid pink;
-	background: black;
+	
+}
+
+.links-footer{
+	float: left;
+}
+
+.redes_sociais-footer{
+	float: right;
 }

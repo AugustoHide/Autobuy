@@ -1,5 +1,4 @@
 .area-principal{
-	margin: 0px auto;
 }
 
 aside{
@@ -8,18 +7,13 @@ aside{
 }
 
 .aside{
-	padding: 10px;
-	border: 1px solid grey;
-	box-shadow: 0px 0px 8px black;
-	background-color: white;
-	margin-top: 100px;
+	margin-top: 130px;
 }
 
 .busca-rapida{
 	background-color: #DCDCDC;
-	box-shadow: 0px 0px 5px grey;
+	box-shadow: 0px 0px 10px white;
 	padding-bottom: 1px;
-	margin-bottom: 10px;
 }
 
 .busca-detalhada{
@@ -34,13 +28,12 @@ aside{
 .conteudo-principal{
 	position: absolute;
 	float: right;
-	margin-top: 90px;
+	margin-top: 50px;
 	margin-left: 250px;
-	border: 4px solid green;
 }
 
 .anuncio{
-	margin: 5px; 
+	margin: 8px; 
 	float: left;
 	background-color: white;
 	box-shadow: 0px 0px 17px black;
@@ -60,6 +53,6 @@ aside{
 }
 
 .foto-anuncio{
-	background-color: black;
+	background-color: white;
 	margin: 3px 0px;
 }
