@@ -8,11 +8,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!--Estilo e formatação-->
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
-		<link rel="stylesheet" type="text/css" href="css/estilo_header.css">
-		<link rel="stylesheet" type="text/css" href="css/estilo_principal.css">
+		<link rel="stylesheet" type="text/css" href="View/css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="View/css/estilo_header.css">
+		<link rel="stylesheet" type="text/css" href="View/css/estilo_principal.css">
 		<!--Bootstrap-->
-		<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="View/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,17 +34,17 @@
 				outras páginas nos casos de uso
 			-->
 			<div class="area container">
-				<a href="">
+				<a href="index.php">
 					<h1 id="logo-cabecalho" class="col-sm-7">Autobuy</h1>
 				</a>
 				<span id="links-cabecalho" class="row col-sm-5">
-					<a href="#">Página Principal</a>
 					<a href="#">Comprar</a>
-					<a href="#">Busca Detalhada</a>
+					<a href="#">Vender</a>
+					<a href="#">Financiamento(RNF)</a>
 					<a href="index.php?action=cadastrar2">Cadastro de veiculo(teste)</a><br>
 					
 					<span class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login</a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login(RNF)</a>
 						<form method="post" class="dropdown-menu">
 							<input type="text" name="login" class="form-control" placeholder="Digite seu login">
 							<input type="text" name="senha" class="form-control" placeholder="Digite sua senha">
@@ -77,7 +77,7 @@
 				-->
 				<h2>Principais anúncios</h2>
 				<section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="sources/OnixFrente.png">
+					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
 					
 					<a href="#">
 						<div class="info-anuncio">
@@ -88,7 +88,7 @@
 					</a>
 				</section>
 				<section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="sources/OnixFrente.png">
+					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
 					
 					<a href="#">
 						<div class="info-anuncio">
@@ -99,7 +99,7 @@
 					</a>
 				</section>
 				<section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="sources/OnixFrente.png">
+					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
 					
 					<a href="#">
 						<div class="info-anuncio">
@@ -110,7 +110,7 @@
 					</a>
 				</section>
 				<section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="sources/OnixFrente.png">
+					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
 					
 					<a href="#">
 						<div class="info-anuncio">
@@ -120,7 +120,7 @@
 						</div>
 					</a>
 				</section><section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="sources/OnixFrente.png">
+					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
 					
 					<a href="#">
 						<div class="info-anuncio">
@@ -144,19 +144,15 @@
 			
 			<div class="conteudo-rodape container footer">
 				
-				<div class="col-sm-7 links-footer ">
-					<a href="#">Comprar</a>
-					<a href="#">Vender</a>	
-				</div>
 				<div class="col-sm-5 redes_sociais-footer">
 					<a href="#">
-					<img src="sources/redes_sociais/facebook.png" class="icone">
+					<img src="View/sources/redes_sociais/facebook.png" class="icone">
 					Facebook</a> | 
 					<a href="#">
-					<img src="sources/redes_sociais/instagram.png" class="icone">
+					<img src="View/sources/redes_sociais/instagram.png" class="icone">
 					Instagram</a> | 
 					<a href="#">
-					<img src="sources/redes_sociais/youtube.png" class="icone">
+					<img src="View/sources/redes_sociais/youtube.png" class="icone">
 					Youtube</a>
 				</div>
 			</div>

@@ -30,6 +30,10 @@ class controler
                 require 'View/novoVeiculo.php';
                 break;
 
+            case 'criar-anuncio':
+                require 'View/novoAnuncio.php';
+                break;
+            // teste
             case 'realizar-cadastro':
                 if (trim($_POST['emailCliente']) == '' || trim($_POST['nomeCliente']) == '') {
                     $_SESSION['status'] = 1;
@@ -39,11 +43,12 @@ class controler
                     // certo = 0 vazio = 1 sql = 2 ja existe = 3
                     $_SESSION['status'] = $this->factory->addClientes($cliente);
                 }
-                require 'View/mostra.php';
+                require 'View/erros.php';
                 break;
 
             case 'cadastro-veiculo':
                 break;
+
             case 'listar':
                 $this->factory->listarClientes();
                 break;
@@ -56,12 +61,12 @@ class controler
 
             case 'alterar':
                 $_SESSION['status'] = $this->factory->alterarClientes();
-                require 'View/mostra.php';
+                require 'View/erros.php';
                 break;
             case 'remover':
                 $_SESSION['id'] = $_GET['id'];
                 $_SESSION['status'] = $this->factory->removerClientes();
-                require 'View/mostra.php';
+                require 'View/erros.php';
                 break;
             default:
                 require 'View/paginaPrincipal.php';
