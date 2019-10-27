@@ -23,9 +23,9 @@ class controler
         switch ($action) {
             // só para testes
             case 'cadastrar':
-                require 'View/novo.php';
+                require 'View/login.php';
                 break;
-            
+            // teste
             case 'cadastrar2':
                 require 'View/novoVeiculo.php';
                 break;

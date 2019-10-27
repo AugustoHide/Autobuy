@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -49,6 +47,7 @@
 							<input type="text" name="login" class="form-control" placeholder="Digite seu login">
 							<input type="text" name="senha" class="form-control" placeholder="Digite sua senha">
 							<button type="submit" class="btn-primary">Logar</button>
+							<a href="index.php?action=cadastrar"> nao tenho cadastro</a>
 						</form>
 					</span>
 				</span>

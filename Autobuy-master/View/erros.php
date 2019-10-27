@@ -23,4 +23,4 @@ switch ($_SESSION['status']) {
 
 } ?>
 <br><a href="index.php?action=cadastrar">Voltar ao cadastro</a>
-<br><a href="index.php?action=listar">Ver lista</a>
+<br><a href="index.php">Voltar ao site</a>
