@@ -1,0 +1,26 @@
+Fazer pelo menos o principal até quarta-feira
+
+1) Criar todas as páginas de acesso.
+ 1.2) Fazer toda a linkagem entre as páginas.
+ 1.3) Adicionar conteudo nas páginas
+
+
+2) Aumentar o banco de dados, usando como base o doc2(os diagramas) do trabalho.
+
+
+3) Fazer o header e o footer da página
+ 3.1) Ambos tem que ser em arquivos separados e depois a gente só faz require deles em cada página
+
+
+4) Aprender a fazer o chat para o sistema
+ 4.1) implementar o chat
+
+5) Aprender bootstrap
+ 5.1) Melhorar o design da página principal
+ 5.2) Criar design para as outras páginas(depende do 1.3)
+
+6) Fazer o back-end de cada página(depende do 1)
+
+
+Se vcs acharem que precisa de mais alguma coisa, colocar aqui.
+
