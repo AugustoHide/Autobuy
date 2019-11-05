@@ -21,6 +21,15 @@ class controler
         $action = isset($_GET['action']) ? $_GET['action'] : '';
 
         switch ($action) {
+            case 'comprar':
+                require 'View/paginaCompras.php';
+                break;
+            case 'vender':
+                require 'View/paginaVendas.php';
+                break;
+            case 'financiamento':
+                require 'View/paginaFinanciamento.php';
+                break;
             // só para testes
             case 'cadastrar':
                 require 'View/login.php';
@@ -28,10 +37,6 @@ class controler
             // teste
             case 'cadastrar2':
                 require 'View/novoVeiculo.php';
-                break;
-
-            case 'criar-anuncio':
-                require 'View/novoAnuncio.php';
                 break;
             // teste
             case 'realizar-cadastro':
