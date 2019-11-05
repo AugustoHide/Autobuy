@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
 
 
@@ -28,19 +28,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <nav class="navbar navbar-default border">
-      <div class="container border">
+    <!-- -------------Cabeçalho-------------   -->
+    <nav class="navbar navbar-default cabecalho ">
+      <div class="container ">
 
-        <div class="navbar-header border">
+        <div class="navbar-header ">
           <a href="#" class="navbar-brand">LOGP</a>
         </div>
         
-        <ul class="nav navbar-nav border">
-          <li><a href="#">Página Principal</a></li>
-          <li><a href="#">Vender</a></li>
-          <li><a href="#">Busca Detalhada</a></li>
-          <li><a href="#">Financiamento</a></li>
+        <ul class="nav navbar-nav ">
           <li><a href="#">Comprar</a></li>
+          <li><a href="#">Vender</a></li>
+          <span class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">vender</a>
+            <div class="dropdown-menu">
+              <a href="#"></a>
+            </div>
+          </span>
+          <li><a href="#">Financiamento (FNF)</a></li>
+          <li><a href="#">Busca Detalhada</a></li>
           <span class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login</a>
             <form method="post" class="dropdown-menu">
@@ -66,8 +72,8 @@
           </form>
         </div>
         <!--Anúncios-->
-        <div>
-          <h1>Melhores Ofertas</h1>
+        <div class="secaoAnuncio">
+          <h1 class="red">Melhores Ofertas</h1>
           <div class="anuncio col-sm-6 col-md-4 col-lg-3 ">  
             <div class="card anuncio_borda">
               <img class="img-fluid" alt="Responsive image" src="sources/OnixFrente.png">
@@ -165,33 +171,31 @@
     </div>
     <!--RODAPÉ-->
     <footer class="footer">
-      <div class="container">
+      <div class="container rodape_mapa">
         <div class="col-sm-6 col-lg-3">
-          <h6>Comprar</h6>
+          <h5>Comprar</h5>
           <ul class="nav navbar-nav">
             <li><a href="#">Carros Usados</a></li>
             <li><a href="#">Carros 0KM</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-3">
-          <h6>Vender</h6>
+          <h5>Vender</h5>
           <ul class="nav navbar-nav">
             <li><a href="#">Gerenciar meu anúncio</a></li>
           </ul>
         </div>
-        <hr>
+      </div>
+      <div class="rodape_inferior">
         <div class="container">
           <a href="#">
-          <img src="sources/redes_sociais/facebook.png" class="img-fluid icone-redesSociais" alt="Responsive image">
-          Facebook</a> | 
+          <img src="sources/redes_sociais/facebook.png" class="img-fluid icone-redesSociais " alt="Responsive image"></a>
           <a href="#">
-          <img src="sources/redes_sociais/instagram.png" class="img-fluid icone-redesSociais" alt="Responsive image">
-          Instagram</a> | 
+          <img src="sources/redes_sociais/instagram.png" class="img-fluid icone-redesSociais" alt="Responsive image"></a>
           <a href="#">
-          <img src="sources/redes_sociais/youtube.png" class="img-fluid icone-redesSociais" alt="Responsive image">
-          Youtube</a>
+          <img src="sources/redes_sociais/youtube.png" class="img-fluid icone-redesSociais" alt="Responsive image"></a>
         </div>
-      </div>
+      </div>  
     </footer>
   </body>
 </html>
