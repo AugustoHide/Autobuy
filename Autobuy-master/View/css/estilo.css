@@ -1,40 +1,93 @@
-.border{
-	border: 1px solid green;
+body{
+	background-color: black;
 }
 
+
+
+.cabecalho{
+	color: white;
+	background-image: linear-gradient(to right, #0D3A7C, #5F95EC);
+	margin-bottom: 40px;
+}
+
+
+
+.busca-rapida{
+	margin-top: 10px;
+	margin-bottom: 10px;	
+	padding: 5px; 
+	background-color: #D3DBE7;
+	box-shadow: 0px 0px 10px #D3DBE7;
+}
+
+.secaoAnuncio{
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+}
 .anuncio{
 	float: left;	
 }
 .anuncio_borda{
-	box-shadow: 0px 0px 10px black;
+	box-shadow: 0px 0px 20px #D3DBE7;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-.busca-rapida{
-	margin-top: 10px;
-	padding: 5px; 
-	background-color: #DCDCDC;
-	box-shadow: 0px 0px 10px black;
-}
-
-footer {
-	clear: both;
-	padding: 20px;
-	background-color: grey;
-}
-
-
-
-
 .modelo-anuncio{
 	font-weight: bold;
+	color: red;
+	font-size: 20px;
 }
-
 .preco-anuncio{
 	margin-top: 50px;
 	font-size: 30px;
+	color: black;
 }
 
-.icone-redesSociais{
-	width: 20px;
+
+
+
+footer {
+	clear: both;
+	background-color: #0D3A7C;
 }
+.rodape_mapa{	
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.rodape_inferior{
+	background-color: white;
+	align-items: center;
+	padding: 20px;
+}
+.icone-redesSociais{
+	width: 40px;
+	padding: 5px;
+}
+
+
+a{
+	text-decoration: none;
+	color: white;
+}
+a:hover{
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+
+h5{
+	color: #D3DBE7;
+}
+
+.red{
+	color: red;
+}
+
+
+
+
+
+
+
+
+
