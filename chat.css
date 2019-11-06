@@ -1,0 +1,38 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    background-color: #222222;
+    padding-top: 15px;
+}
+
+.superior{
+    width: 80%;
+    height: 100%;
+    background-color: #c0c0c0c0;
+    text-align: center;
+    margin-left: 66px;
+}
+
+.campos{
+    background-color: #c0c000;
+    width: 80%;
+    height: 112px;
+}
+
+textarea{
+    height: 60px;
+    display: block;
+}
+
+input[type="text"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: yellow;
+  }
