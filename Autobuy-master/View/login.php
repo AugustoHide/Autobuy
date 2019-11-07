@@ -1,6 +1,7 @@
 <html>
 <head>
- <><>
+ <title>Autobuy</title>
+ <?php include("includes/head.php"); ?>
 </head>
  <form action="index.php?action=realizar-cadastro" method="post">
 
