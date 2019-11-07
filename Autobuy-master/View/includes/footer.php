@@ -1,5 +1,3 @@
-
-
 <footer class="footer">
       <div class="container rodape_mapa">
         <div class="col-sm-6 col-lg-3">
