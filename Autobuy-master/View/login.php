@@ -1,4 +1,7 @@
 <html>
+<head>
+ <><>
+</head>
  <form action="index.php?action=realizar-cadastro" method="post">
 
   <div class="container">
