@@ -3,10 +3,8 @@
 
 		<!--Estilo e formatação-->
 		<link rel="stylesheet" type="text/css" href="View/css/estilo.css">
-		<link rel="stylesheet" type="text/css" href="View/css/estilo_header.css">
-		<link rel="stylesheet" type="text/css" href="View/css/estilo_principal.css">
 		<!--Bootstrap-->
-		<link href="View/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link  rel="stylesheet" href="View/css/bootstrap/css/bootstrap.min.css">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

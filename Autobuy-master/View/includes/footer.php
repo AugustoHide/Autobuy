@@ -1,22 +1,29 @@
-<footer class="page-footer font-small blue pt-4">
-			<!--Links para:
-				páginas do site
-				Termos de uso
-				etc
-			-->	
-			
-			<div class="conteudo-rodape container footer">
-				
-				<div class="col-sm-5 redes_sociais-footer">
-					<a href="#">
-					<img src="../sources/redes_sociais/facebook.png" class="icone">
-					Facebook</a> | 
-					<a href="#">
-					<img src="../sources/redes_sociais/instagram.png" class="icone">
-					Instagram</a> | 
-					<a href="#">
-					<img src="../sources/redes_sociais/youtube.png" class="icone">
-					Youtube</a>
-				</div>
-			</div>
-</footer>
+
+
+<footer class="footer">
+      <div class="container rodape_mapa">
+        <div class="col-sm-6 col-lg-3">
+          <h5>Comprar</h5>
+          <ul class="nav navbar-nav">
+            <li><a href="#">Carros Usados</a></li>
+            <li><a href="#">Carros 0KM</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h5>Vender</h5>
+          <ul class="nav navbar-nav">
+            <li><a href="#">Gerenciar meu anúncio</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape_inferior">
+        <div class="container">
+          <a href="#">
+          <img src="View/sources/redes_sociais/facebook.png" class="img-fluid icone-redesSociais " alt="Responsive image"></a>
+          <a href="#">
+          <img src="View/sources/redes_sociais/instagram.png" class="img-fluid icone-redesSociais" alt="Responsive image"></a>
+          <a href="#">
+          <img src="View/sources/redes_sociais/youtube.png" class="img-fluid icone-redesSociais" alt="Responsive image"></a>
+        </div>
+      </div>  
+    </footer>

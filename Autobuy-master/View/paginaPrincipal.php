@@ -12,89 +12,116 @@
 	
 		<?php include("includes/header.php"); ?>
 
-
-		<div class="area-principal container">		
-			<aside class="col-sm-12">
-				<div class="col-sm-11 aside">
-					<!--Mecanismos de buscas-->
-					<div class="busca-rapida col-sm-12">
-						<form method="POST">
-							<div class="form-group">
-								<label for="busca-rapida">Digite a marca ou modelo:</label>
-								<input type="text" name="busca-rapida" class="form-control" id="busca-rapida"><br>
-								<button type="submit" class="btn btn-primary">Pesquisar</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</aside>
-			<div class="conteudo-principal col-sm-12">
-				<!--Conteúdo principal
-						anúncio de carros
-						seção de modelos mais vendidos
-						etc
-				-->
-				<h2>Principais anúncios</h2>
-				<section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
-					
-					<a href="#">
-						<div class="info-anuncio">
-							<span class="modelo-anuncio">Chevrolet Onix</span>
-							<br>
-							<div class="preco-anuncio">R$20000</div>
-						</div>
-					</a>
-				</section>
-				<section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
-					
-					<a href="#">
-						<div class="info-anuncio">
-							<span class="modelo-anuncio">Chevrolet Onix</span>
-							<br>
-							<div class="preco-anuncio">R$20000</div>
-						</div>
-					</a>
-				</section>
-				<section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
-					
-					<a href="#">
-						<div class="info-anuncio">
-							<span class="modelo-anuncio">Chevrolet Onix</span>
-							<br>
-							<div class="preco-anuncio">R$20000</div>
-						</div>
-					</a>
-				</section>
-				<section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
-					
-					<a href="#">
-						<div class="info-anuncio">
-							<span class="modelo-anuncio">Chevrolet Onix</span>
-							<br>
-							<div class="preco-anuncio">R$20000</div>
-						</div>
-					</a>
-				</section><section class="anuncio col-sm-3">
-					<img class="foto-anuncio col-sm-12" src="View/sources/OnixFrente.png">
-					
-					<a href="#">
-						<div class="info-anuncio">
-							<span class="modelo-anuncio">Chevrolet Onix</span>
-							<br>
-							<div class="preco-anuncio">R$20000</div>
-						</div>
-					</a>
-				</section>
-			</div>
-		</div>
-		<div style="clear: both; margin-bottom: 150px;">
-			      
-		</div>
-		
+		<div class="container">
+      <div>
+        <!--Mecanismo de buscas-->
+        <div class="container busca-rapida card">
+          <form method="POST" >
+            <div class="form-group container">
+              <label for="busca-rapida">Digite a marca ou modelo:</label>
+              <input type="text" name="busca-rapida" class="form-control" id="busca-rapida"><br>
+              <button type="submit" class="btn btn-primary">Pesquisar</button>
+            </div>
+          </form>
+        </div>
+        <!--Anúncios-->
+        <div class="secaoAnuncio">
+          <h1 class="red">Melhores Ofertas</h1>
+          <div class="anuncio col-sm-6 col-md-4 col-lg-3 ">  
+            <div class="card anuncio_borda">
+              <img class="img-fluid" alt="Responsive image" View/src="View/sources/OnixFrente.png">
+            
+              <a href="#">
+                <div class="container">
+                  <span class="modelo-anuncio">Chevrolet Onix</span>
+                  <br>
+                  <div class="preco-anuncio">R$20000</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="anuncio col-sm-6 col-md-4 col-lg-3 ">  
+            <div class="card anuncio_borda">
+              <img class="img-fluid" alt="Responsive image" src="View/sources/OnixFrente.png">
+            
+              <a href="#">
+                <div class="container">
+                  <span class="modelo-anuncio">Chevrolet Onix</span>
+                  <br>
+                  <div class="preco-anuncio">R$20000</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="anuncio col-sm-6 col-md-4 col-lg-3 ">  
+            <div class="card anuncio_borda">
+              <img class="img-fluid" alt="Responsive image" src="View/sources/OnixFrente.png">
+            
+              <a href="#">
+                <div class="container">
+                  <span class="modelo-anuncio">Chevrolet Onix</span>
+                  <br>
+                  <div class="preco-anuncio">R$20000</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="anuncio col-sm-6 col-md-4 col-lg-3 ">  
+            <div class="card anuncio_borda">
+              <img class="img-fluid" alt="Responsive image" src="View/sources/OnixFrente.png">
+            
+              <a href="#">
+                <div class="container">
+                  <span class="modelo-anuncio">Chevrolet Onix</span>
+                  <br>
+                  <div class="preco-anuncio">R$20000</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="anuncio col-sm-6 col-md-4 col-lg-3 ">  
+            <div class="card anuncio_borda">
+              <img class="img-fluid" alt="Responsive image" src="View/sources/OnixFrente.png">
+            
+              <a href="#">
+                <div class="container">
+                  <span class="modelo-anuncio">Chevrolet Onix</span>
+                  <br>
+                  <div class="preco-anuncio">R$20000</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="anuncio col-sm-6 col-md-4 col-lg-3 ">  
+            <div class="card anuncio_borda">
+              <img class="img-fluid" alt="Responsive image" src="View/sources/OnixFrente.png">
+            
+              <a href="#">
+                <div class="container">
+                  <span class="modelo-anuncio">Chevrolet Onix</span>
+                  <br>
+                  <div class="preco-anuncio">R$20000</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="anuncio col-sm-6 col-md-4 col-lg-3 ">  
+            <div class="card anuncio_borda">
+              <img class="img-fluid" alt="Responsive image" src="View/sources/OnixFrente.png">
+            
+              <a href="#">
+                <div class="container">
+                  <span class="modelo-anuncio">Chevrolet Onix</span>
+                  <br>
+                  <div class="preco-anuncio">R$20000</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
 
 		<?php include("includes/footer.php"); ?>
 
