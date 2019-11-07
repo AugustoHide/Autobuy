@@ -19,8 +19,8 @@
           </li>
           <span class=" nav-link dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vender</a>
-            <div class="linkdropdown dropdown-menu">
-              <a href="#">Gerenciar meu anúncio</a>
+            <div  class="dropdown-menu">
+              <a id="linkdropdown" href="#">Gerenciar meu anúncio</a>
             </div>
           </span>
           <li>
