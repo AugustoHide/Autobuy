@@ -7,25 +7,39 @@ class factory
 
     public function __construct()
     {
-
+        // Usar o banco de dados aqui fica mais facil pra fazer as modificações futuras
         // Create (connect to) SQLite database in file
         $this->file_db = new PDO('sqlite:C:\wamp\www\Autobuy\Autobuy-master\Model\DBAutobuy.sqlite');//muda aqui se quiser acessar teu bd
 
         // Set errormode to exceptions
         $this->file_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+        $this->file_db->exec("CREATE TABLE IF NOT EXISTS login (
+            login varchar(45) NOT NULL,
+            senha varchar(8) NOT NULL,
+            idLogin integer PRIMARY KEY AUTOINCREMENT)");
+
+        $this->file_db->exec("CREATE TABLE IF NOT EXISTS cliente(
+            idCliente integer PRIMARY KEY AUTOINCREMENT,
+            email varchar(45) NOT NULL,
+            nome varchar(45) NOT NULL,
+            cpf char(11) PRIMARY KEY,
+            endereco varchar(45) NOT NULL,
+            idAnuncio integer NOT NULL,
+            idLogin integer NOT NULL, FOREIGN KEY (idLogin) REFERENCES 'login' (idLogin))");
+
         // apenas para testes
-        $this->file_db->exec("CREATE TABLE IF NOT EXISTS cliente (
-                        ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                        email TEXT NOT NULL,
-                        nome TEXT NOT NULL )");
+        // $this->file_db->exec("CREATE TABLE IF NOT EXISTS cliente (
+        //                 ID INTEGER PRIMARY KEY AUTOINCREMENT,
+        //                 email TEXT NOT NULL,
+        //                 nome TEXT NOT NULL )");
         
-        $this->file_db->exec("CREATE TABLE IF NOT EXISTS veiculo (
-                        foto TEXT NOT NULL PRIMARY KEY,
-		                marca TEXT NOT NULL,
-                        ano INTEGER NOT NULL,
-                        cor TEXT NOT NULL,
-                        preco DECIMAL NOT NULL)");
+        // $this->file_db->exec("CREATE TABLE IF NOT EXISTS veiculo (
+        //                 foto TEXT NOT NULL PRIMARY KEY,
+		      //           marca TEXT NOT NULL,
+        //                 ano INTEGER NOT NULL,
+        //                 cor TEXT NOT NULL,
+        //                 preco DECIMAL NOT NULL)");
     }
 
     public function __destruct()
