@@ -4,7 +4,7 @@
 	<head>
 		<title>Login Autobuy</title>
 		<?php include("includes/head.php"); ?>
-		<link rel="stylesheet" type="text/css" href="css/estiloLogin.css">
+		<link rel="stylesheet" type="text/css" href="View/css/estiloLogin.css">
 	</head>
 	<body>
 
@@ -17,7 +17,7 @@
 				<h3>LOGO AUTOBUY</h3>
 			</div>
 			<div class="formularioDiv card col-md-4 float marginTop">
-				<form class="formulario" action="index.php?action=logar" method="post">
+				<form class="formulario" action="index.php?action=entrar" method="post">
 					<h1>Login</h1>	
 					<div class="form-goup formEmement">
 					    <label for="login">Login</label>

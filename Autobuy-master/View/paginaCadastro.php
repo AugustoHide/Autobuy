@@ -4,7 +4,7 @@
 	<head>
 		<title>Cadastro Autobuy</title>
 		<?php include("includes/head.php"); ?>
-		<link rel="stylesheet" type="text/css" href="css/estiloLogin.css">
+		<link rel="stylesheet" type="text/css" href="View/css/estiloLogin.css">
 	</head>
 	<body>
 

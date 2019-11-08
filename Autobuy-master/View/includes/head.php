@@ -2,13 +2,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
 		<!--Estilo e formatação-->
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<link rel="stylesheet" type="text/css" href="View/css/estilo.css">
 		
 		<!--Bootstrap-->
 		<link  rel="stylesheet" href="View/css/bootstrap/css/bootstrap.min.css">
-		<link  rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="View/css/bootstrap/js/bootstrap.min.js">
+		<!-- <link  rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="View/css/bootstrap/js/bootstrap.min.js"> -->
 
 		
 
