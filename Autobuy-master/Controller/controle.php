@@ -1,6 +1,5 @@
 <?php
 session_start();
-require 'Model/Cliente.php';
 require 'Model/factory.php';
 
 $_GET['insertstatus'] = null;
@@ -21,6 +20,9 @@ class controler
         $action = isset($_GET['action']) ? $_GET['action'] : '';
 
         switch ($action) {
+            case 'usuario':
+                require 'View/paginaUsuario.php';
+                break;
             case 'comprar':
                 require 'View/paginaCompras.php';
                 break;
@@ -31,12 +33,14 @@ class controler
                 require 'View/paginaFinanciamento.php';
                 break;
             // só para testes
-            case 'cadastrar':
-                require 'View/login.php';
+            case 'logar':
+                require 'View/paginaLogin.php';
                 break;
-            // teste
-            case 'cadastrar2':
-                require 'View/novoVeiculo.php';
+            case 'sair':
+                require 'View/logout.php';
+                break;
+            case 'cadastrar':
+                require 'View/paginaCadastro.php';
                 break;
             // teste
             case 'realizar-cadastro':
