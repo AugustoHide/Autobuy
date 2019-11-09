@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'Model/factory.php';
-
+require 'Model/cliente.php';
 $_GET['insertstatus'] = null;
 
 class controler
@@ -44,12 +44,10 @@ class controler
                 break;
             // teste
             case 'realizar-cadastro':
-                if (trim($_POST['emailCliente']) == '' || trim($_POST['nomeCliente']) == '') {
+                if (!isset($_POST['nomeCliente'],$_POST['email'],$_POST['cpf'],$_POST['endereco'])) {
                     $_SESSION['status'] = 1;
                 } else {
-                    $cliente = new cliente($_POST['nomeCliente'], $_POST['emailCliente']);
-                    //addStatus é o int que o addCliente retorna indicando cod de erro ou sucesso
-                    // certo = 0 vazio = 1 sql = 2 ja existe = 3
+                    $cliente = new cliente($_POST['nomeCliente'],$_POST['email'],$_POST['cpf'],$_POST['endereco']);
                     $_SESSION['status'] = $this->factory->addClientes($cliente);
                 }
                 require 'View/erros.php';

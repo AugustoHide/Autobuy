@@ -15,7 +15,7 @@
 		<div class="container">
 			
 			<div class="formularioDiv card col-md-8 float marginTop">
-				<form class="formulario" action="index.php?action=cadastrar" method="post">
+				<form class="formulario" action="index.php?action=realizar-cadastro" method="post">
 					<h1>Cadastre-se</h1>	
 					<div class="form-goup formEmement">
 					    <label for="nomeCliente">Nome Completo</label>
@@ -28,22 +28,9 @@
 					    <input class="form-control" type="text" placeholder="ex.: 123.456.789-00" id="cpf" name="cpf" pattern="\d{3}.\d{3}.\d{3}-\d{2}">
 					</div>
 					<div class="form-goup formEmement">
-					    <label for="rg">RG</label>
-					    <br>
-					    <input class="form-control" type="text" placeholder="ex.: 0012345" id="rg" name="rg">
-					</div>
-					<div class="form-goup formEmement">
 					    <label for="endereco">Endereço</label>
 					    <br>
 					    <input class="form-control" type="text" placeholder="ex.: Rua José Silva" id="endereco" name="endereco">
-					</div>
-					<div class="form-check-inline">
-						<input type="radio" name="VenderComprador" id="vendedor" class="form-check-input" value="vendedor">
-						<label class="form-check-label" for="vendedor">Vendedor</label>						
-					</div>
-					<div class="form-check-inline">
-						<input type="radio" name="VenderComprador" id="comprador" class="form-check-input" value="comprador">
-						<label class="form-check-label" for="comprador">Comprador</label>						
 					</div>
 					<div class="form-goup formEmement">
 					    <label for="email">Email</label>

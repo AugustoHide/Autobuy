@@ -15,15 +15,15 @@ class factory
         $this->file_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $this->file_db->exec("CREATE TABLE IF NOT EXISTS login (
-            login varchar(45) NOT NULL,
-            senha varchar(8) NOT NULL,
+            email varchar(45) NOT NULL,
+            senha varchar(45) NOT NULL,
             idLogin integer PRIMARY KEY AUTOINCREMENT)");
 
         $this->file_db->exec("CREATE TABLE IF NOT EXISTS cliente(
             idCliente integer PRIMARY KEY AUTOINCREMENT,
-            email varchar(45) NOT NULL,
             nome varchar(45) NOT NULL,
-            cpf char(11) PRIMARY KEY,
+            email varchar(45) NOT NULL,
+            cpf char(11) NOT NULL,
             endereco varchar(45) NOT NULL,
             idLogin integer NOT NULL, FOREIGN KEY (idLogin) REFERENCES 'login' (idLogin))");
 
@@ -31,7 +31,7 @@ class factory
             idVeiculo integer PRIMARY KEY AUTOINCREMENT,
             foto longblob NOT NULL,
             marca varchar(45) NOT NULL,
-            ano date PRIMARY KEY,
+            ano date NOT NULL,
             cor varchar(45) NOT NULL,
             quilometragem integer NOT NULL,
             categoria varchar(45) NOT NULL,
@@ -59,35 +59,21 @@ class factory
         }
     }
 
-    // public function addVeiculo($veiculo){
-    //     try {
-
-    //         $insert = "INSERT INTO veiculo (foto, marca, ano, cor, preco)
-    //             VALUES (:foto, :marca, :ano, :cor, :preco)";
-    //         $stmt = $this->file_db->prepare($insert);
-    //         $stmt->bindParam(':foto', $veiculo->foto);
-    //         $stmt->bindParam(':marca', $veiculo->marca);
-    //         $stmt->bindParam(':ano', $veiculo->ano);
-    //         $stmt->bindParam(':cor', $veiculo->cor);
-    //         $stmt->bindParam(':preco', $veiculo->preco);
-    //         $stmt->execute();
-    //         return 0;
-
-    //     } catch (PDOException $e) {
-    //         echo $e->getMessage();
-    //         return 2;
-    //     }
-    // }
-    public function addClientes($cliente)
+     public function addClientes($cliente)
     {
         if ($this->buscarClientes($cliente->email) == null) {
             try {
 
-                $insert = "INSERT INTO cliente (ID, nome, email)
-	                VALUES (null, :nome, :email)";
+                $insert = "INSERT INTO cliente (idCliente, email, nome,cpf,endereco,idLogin)
+                    VALUES (null, :email, :nome,:cpf,:endereco,1)";
+                    //Mudar o 1 pra 2 quando adicionar novo cliente(so to fazendo teste mesmo)
+                    
                 $stmt = $this->file_db->prepare($insert);
-                $stmt->bindParam(':nome', $cliente->nome);
                 $stmt->bindParam(':email', $cliente->email);
+                $stmt->bindParam(':nome', $cliente->nome);
+                $stmt->bindParam(':cpf', $cliente->cpf);
+                $stmt->bindParam(':endereco', $cliente->endereco);
+                
                 $stmt->execute();
                 return 0;
 
@@ -105,7 +91,7 @@ class factory
         $lista = $this->file_db->query('SELECT * FROM cliente');
         foreach ($lista as $row) {
             if ($row['email'] == $email)
-                return $row['ID'];
+                return $row['idCliente'];
         }
         return null;
     }
