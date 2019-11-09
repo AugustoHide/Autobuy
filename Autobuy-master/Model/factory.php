@@ -25,21 +25,26 @@ class factory
             nome varchar(45) NOT NULL,
             cpf char(11) PRIMARY KEY,
             endereco varchar(45) NOT NULL,
-            idAnuncio integer NOT NULL,
             idLogin integer NOT NULL, FOREIGN KEY (idLogin) REFERENCES 'login' (idLogin))");
 
-        // apenas para testes
-        // $this->file_db->exec("CREATE TABLE IF NOT EXISTS cliente (
-        //                 ID INTEGER PRIMARY KEY AUTOINCREMENT,
-        //                 email TEXT NOT NULL,
-        //                 nome TEXT NOT NULL )");
-        
-        // $this->file_db->exec("CREATE TABLE IF NOT EXISTS veiculo (
-        //                 foto TEXT NOT NULL PRIMARY KEY,
-		      //           marca TEXT NOT NULL,
-        //                 ano INTEGER NOT NULL,
-        //                 cor TEXT NOT NULL,
-        //                 preco DECIMAL NOT NULL)");
+        $this->file_db->exec("CREATE TABLE IF NOT EXISTS veiculo(
+            idVeiculo integer PRIMARY KEY AUTOINCREMENT,
+            foto longblob NOT NULL,
+            marca varchar(45) NOT NULL,
+            ano date PRIMARY KEY,
+            cor varchar(45) NOT NULL,
+            quilometragem integer NOT NULL,
+            categoria varchar(45) NOT NULL,
+            tipo varchar(45) NOT NULL)");
+
+        $this->file_db->exec("CREATE TABLE IF NOT EXISTS idAnuncio(
+            idAnuncio integer PRIMARY KEY AUTOINCREMENT,
+            idCliente integer NOT NULL,
+            idVeiculo integer NOT NULL,
+            descricao varchar NOT NULL,
+            dataPublicacao date NOT NULL, 
+            FOREIGN KEY (idCliente) REFERENCES 'cliente' (idCliente),
+            FOREIGN KEY (idVeiculo) REFERENCES 'veiculo' (idVeiculo))");
     }
 
     public function __destruct()
@@ -53,25 +58,26 @@ class factory
             echo $e->getMessage();
         }
     }
-    public function addVeiculo($veiculo){
-        try {
 
-            $insert = "INSERT INTO veiculo (foto, marca, ano, cor, preco)
-                VALUES (:foto, :marca, :ano, :cor, :preco)";
-            $stmt = $this->file_db->prepare($insert);
-            $stmt->bindParam(':foto', $veiculo->foto);
-            $stmt->bindParam(':marca', $veiculo->marca);
-            $stmt->bindParam(':ano', $veiculo->ano);
-            $stmt->bindParam(':cor', $veiculo->cor);
-            $stmt->bindParam(':preco', $veiculo->preco);
-            $stmt->execute();
-            return 0;
+    // public function addVeiculo($veiculo){
+    //     try {
 
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-            return 2;
-        }
-    }
+    //         $insert = "INSERT INTO veiculo (foto, marca, ano, cor, preco)
+    //             VALUES (:foto, :marca, :ano, :cor, :preco)";
+    //         $stmt = $this->file_db->prepare($insert);
+    //         $stmt->bindParam(':foto', $veiculo->foto);
+    //         $stmt->bindParam(':marca', $veiculo->marca);
+    //         $stmt->bindParam(':ano', $veiculo->ano);
+    //         $stmt->bindParam(':cor', $veiculo->cor);
+    //         $stmt->bindParam(':preco', $veiculo->preco);
+    //         $stmt->execute();
+    //         return 0;
+
+    //     } catch (PDOException $e) {
+    //         echo $e->getMessage();
+    //         return 2;
+    //     }
+    // }
     public function addClientes($cliente)
     {
         if ($this->buscarClientes($cliente->email) == null) {
