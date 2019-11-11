@@ -1,25 +1,13 @@
 Fazer pelo menos o principal até quarta-feira
 
-1) Criar todas as páginas de acesso. (Filipe) - FEITO(precisa definir algumas coisas em grupo)
- 1.2) Fazer toda a linkagem entre as páginas. (Filipe)
- 1.3) Adicionar conteudo nas páginas
-
-
-2) Aumentar o banco de dados, usando como base o doc2(os diagramas) do trabalho.
-
-5) Augusto Aprender bootstrap
- 5.1)Augusto Melhorar o design da página principal
- 5.2)Augusto Criar design para as outras páginas(depende do 1.3)
-
-6) Fazer o back-end de cada página(depende do 1)
-
-Se vcs acharem que precisa de mais alguma coisa, colocar aqui.
-
-
-
 1) fazer banco de dados|Wellyngtton 
 
 2) fazer as páginas em html com o formulário. 
- 2.1) página para cadastro de veículo(anúncio) Wellington 
+
  2.2) criar tela para login/cadastro de informações de cliente Augusto 
-3) implementar a busca simples| (Página principal) Filipe 
+
+
+
+-> Terminar o login && 3) implementar a busca simples| (Página principal) Filipe 
+-> página para cadastro de veículo(anúncio) Wellington && fazer o back-end
+-> 
