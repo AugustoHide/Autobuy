@@ -8,6 +8,8 @@ Fazer pelo menos o principal até quarta-feira
 
 
 
--> Terminar o login && 3) implementar a busca simples| (Página principal) Filipe 
+-> Terminar o login && implementar a busca simples| (Página principal) Filipe 
 -> página para cadastro de veículo(anúncio) Wellington && fazer o back-end
--> 
+-> página de catálogo/busca detalhada + pagina anuncio Augusto 
+-> adicionar js na pagina de erros bonus 
+->
