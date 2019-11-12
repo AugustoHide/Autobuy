@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 require 'Model/factory.php';
 require 'Model/cliente.php';
 $_GET['insertstatus'] = null;
@@ -43,12 +44,40 @@ class controler
                 require 'View/paginaCadastro.php';
                 break;
             // teste
+
             case 'realizar-cadastro':
-                if (!isset($_POST['nomeCliente'],$_POST['email'],$_POST['cpf'],$_POST['endereco'])) {
+                if (!isset($_POST['email'],$_POST['nomeCliente'],$_POST['cpf'],$_POST['endereco'],$_POST['senha'])) {
                     $_SESSION['status'] = 1;
                 } else {
-                    $cliente = new cliente($_POST['nomeCliente'],$_POST['email'],$_POST['cpf'],$_POST['endereco']);
+                    $cliente = new cliente($_POST['email'],$_POST['nomeCliente'],$_POST['cpf'],$_POST['endereco'],$_POST['senha']);
                     $_SESSION['status'] = $this->factory->addClientes($cliente);
+                }
+                require 'View/erros.php';
+                break;
+
+            case 'realizar-login':
+
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                   
+                    if (isset($_POST['email']) && isset($_POST['senha'])) {
+                        $usuario = $this->factory->logar($_POST['email'], $_POST['senha']);
+                        if (isset($usuario)) {
+                            $_SESSION['usuario'] = $usuario;
+                            header("Location: index.php");
+                            exit();
+                        }else{
+                            $_SESSION['status'] = 6;
+                        }
+                    }else{
+                        $_SESSION['status'] = 6;
+                    }
+                }else{
+                    if (isset($_SESSION['usuario'])) {
+                        echo 'ola else if ';
+                        echo '<div class=\'center-align\'><i class=\'large material-icons teal-text\'>arrow_upward</i></div>';
+                      die();
+                    }
+                    $_SESSION['status'] = 6;
                 }
                 require 'View/erros.php';
                 break;

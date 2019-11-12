@@ -14,18 +14,13 @@ class factory
         // Set errormode to exceptions
         $this->file_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $this->file_db->exec("CREATE TABLE IF NOT EXISTS login (
-            email varchar(45) NOT NULL,
-            senha varchar(45) NOT NULL,
-            idLogin integer PRIMARY KEY AUTOINCREMENT)");
-
         $this->file_db->exec("CREATE TABLE IF NOT EXISTS cliente(
             idCliente integer PRIMARY KEY AUTOINCREMENT,
-            nome varchar(45) NOT NULL,
             email varchar(45) NOT NULL,
+            nome varchar(45) NOT NULL,
             cpf char(11) NOT NULL,
             endereco varchar(45) NOT NULL,
-            idLogin integer NOT NULL, FOREIGN KEY (idLogin) REFERENCES 'login' (idLogin))");
+            senha varchar(45) NOT NULL)");
 
         $this->file_db->exec("CREATE TABLE IF NOT EXISTS veiculo(
             idVeiculo integer PRIMARY KEY AUTOINCREMENT,
@@ -58,14 +53,22 @@ class factory
             echo $e->getMessage();
         }
     }
-
-     public function addClientes($cliente)
+    public function logar($email, $senha){
+       
+        $lista = $this->file_db->query('SELECT * FROM cliente');
+        foreach ($lista as $row) {
+            if ($row['email'] == $email && $row['senha'] == $senha)
+                return $row['nome'];
+        }
+        return null;
+    }
+    public function addClientes($cliente)
     {
         if ($this->buscarClientes($cliente->email) == null) {
             try {
 
-                $insert = "INSERT INTO cliente (idCliente, email, nome,cpf,endereco,idLogin)
-                    VALUES (null, :email, :nome,:cpf,:endereco,1)";
+                $insert = "INSERT INTO cliente (idCliente, email, nome,cpf,endereco,senha)
+                    VALUES (null, :email, :nome,:cpf,:endereco,:senha)";
                     //Mudar o 1 pra 2 quando adicionar novo cliente(so to fazendo teste mesmo)
                     
                 $stmt = $this->file_db->prepare($insert);
@@ -73,7 +76,7 @@ class factory
                 $stmt->bindParam(':nome', $cliente->nome);
                 $stmt->bindParam(':cpf', $cliente->cpf);
                 $stmt->bindParam(':endereco', $cliente->endereco);
-                
+                $stmt->bindParam(':senha', $cliente->senha);
                 $stmt->execute();
                 return 0;
 
@@ -101,12 +104,13 @@ class factory
         $lista = $this->file_db->query('SELECT * FROM cliente');
 
         foreach ($lista as $row) {
-            echo "ID: " . $row['ID'] . '<br>';
+            echo "idCliente: " . $row['idCliente'] . '<br>';
             echo "nome: " . $row['nome'] . '<br>';
             echo "email: " . $row['email'] . '<br>';
+            echo "senha: " . $row['senha'] . '<br>';
             ?>
-            <a href="index.php?action=editar&id=<?php echo $row['ID']; ?>">EDITAR</a><br>
-            <a href="index.php?action=remover&id=<?php echo $row['ID']; ?>">REMOVER</a><br><br>
+            <a href="index.php?action=editar&id=<?php echo $row['idCliente']; ?>">EDITAR</a><br>
+            <a href="index.php?action=remover&id=<?php echo $row['idCliente']; ?>">REMOVER</a><br><br>
             <?php
         }
         ?><a href="index.php">VOLTAR</a><?php
@@ -114,11 +118,11 @@ class factory
 
     //remover cliente
     public function removerClientes(){
-        $id = $_SESSION['id'];
+        $id = $_SESSION['idCliente'];
         try {
-            $sql = "DELETE FROM cliente WHERE ID = :id";
+            $sql = "DELETE FROM cliente WHERE idCliente = :idCliente";
             $stmt = $this->file_db->prepare($sql);
-            $stmt->bindParam(':id', $id);  
+            $stmt->bindParam(':idCliente', $id);  
             $stmt->execute();
             return 4;
         } catch (PDOException $e) {

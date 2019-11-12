@@ -27,7 +27,6 @@
             <a class="nav-link" href="#">Busca Detalhada</a>
           </li>
     <?php
-//     $_SESSION['usuario'] = "Filipe";
       if (isset($_SESSION['usuario'])) {
         $user = $_SESSION['usuario'];
         ?>

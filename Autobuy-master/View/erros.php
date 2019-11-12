@@ -18,6 +18,9 @@ switch ($_SESSION['status']) {
     case 5:
         echo 'Nome mudado com sucesso';
         break;
+    case 6:
+        echo "erro";
+        break;
     default:
         break;
 

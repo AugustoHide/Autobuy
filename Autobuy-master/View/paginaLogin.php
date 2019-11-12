@@ -17,12 +17,12 @@
 				<h3>LOGO AUTOBUY</h3>
 			</div>
 			<div class="formularioDiv card col-md-4 float marginTop">
-				<form class="formulario" action="index.php?action=entrar" method="post">
+				<form class="formulario" action="index.php?action=realizar-login" method="POST">
 					<h1>Login</h1>	
 					<div class="form-goup formEmement">
-					    <label for="login">Login</label>
+					    <label for="email">Email</label>
 					    <br>
-					    <input class="form-control" type="email" placeholder="ex.: josesilva@email.com" id="login" name="login">
+					    <input class="form-control" type="email" placeholder="ex.: josesilva@email.com" id="email" name="email">
 					</div>
 					<div class="form-goup formEmement">
 					    <label for="senha">Senha</label>
