@@ -9,7 +9,12 @@ class factory
     {
         // Usar o banco de dados aqui fica mais facil pra fazer as modificações futuras
         // Create (connect to) SQLite database in file
-        $this->file_db = new PDO('sqlite:C:\wamp\www\Autobuy\Autobuy-master\Model\DBAutobuy.sqlite');//muda aqui se quiser acessar teu bd
+        try{
+            $this->file_db = new PDO('sqlite:C:\wamp64\www\progweb\Autobuy\Autobuy-master\Model\DBAutobuy.sqlite');//muda aqui se quiser acessar teu bd
+        }catch(PDOException $ex){
+            throw new PDO ( $ex->getMessage( ) , $ex->getCode( ) );
+        }
+        
 
         // Set errormode to exceptions
         $this->file_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

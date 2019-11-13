@@ -6,7 +6,7 @@
       <div class="container ">
 
         <div class="navbar-header ">
-          <a href="index.php" class="navbar-brand">LOGP</a>
+          <a href="index.php" class="navbar-brand"><img src="View/css/autobuy2semfundo.png" alt="logotipo" height="200" width="200"></a>
         </div>
 
         
@@ -15,7 +15,7 @@
             <a class="nav-link" href="#">Comprar</a>
           </li>
           <li>
-            <a class="nav-link" href="#">Vender</a>
+            <a class="nav-link" href="index.php?action=vender">Vender</a>
           </li>
           <li>
             <a class="nav-link" href="#">Financiamento (FNF)</a>

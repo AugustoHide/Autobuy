@@ -46,7 +46,8 @@
 				</form>
 			</div>
 			<div class=" col-md-4 float marginTop">
-				<h3>LOGO AUTOBUY</h3>
+			<img src="View/css/autobuy2semfundo.png" alt="logotipo">
+				
 			</div>
 		</div>
 

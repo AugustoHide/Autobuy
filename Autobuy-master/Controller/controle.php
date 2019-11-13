@@ -33,6 +33,10 @@ class controler
             case 'financiamento':
                 require 'View/paginaFinanciamento.php';
                 break;
+            case 'listar-anuncio':
+                    require 'View/paginaListaAnuncio.php';
+                    break;
+
             // só para testes
             case 'logar':
                 require 'View/paginaLogin.php';
