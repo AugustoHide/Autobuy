@@ -14,12 +14,9 @@
           <li>
             <a class="nav-link" href="#">Comprar</a>
           </li>
-          <span class=" nav-link dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vender</a>
-            <div  class="dropdown-menu">
-              <a id="linkdropdown" href="#">Gerenciar meu anúncio</a>
-            </div>
-          </span>
+          <li>
+            <a class="nav-link" href="#">Vender</a>
+          </li>
           <li>
             <a class="nav-link" href="#">Financiamento (FNF)</a>
           </li>
@@ -28,7 +25,7 @@
           </li>
     <?php
       if (isset($_SESSION['usuario'])) {
-        $user = $_SESSION['usuario'];
+        $user['nome'] = $_SESSION['usuario'];
         ?>
         <li><a class="nav-link" href="index.php?action=usuario"><?php echo $user['nome']; ?></a></li>
         <li><a class="nav-link" href="index.php?action=sair">sair</a></li>
