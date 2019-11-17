@@ -6,13 +6,13 @@
       <div class="container ">
 
         <div class="navbar-header ">
-          <a href="index.php" class="navbar-brand"><img src="View/css/autobuy2semfundo.png" alt="logotipo" height="200" width="200"></a>
+          <a href="index.php" class="navbar-brand"><img src="View/css/autobuy2semfundo.png" alt="logotipo" height="100" width="100"></a>
         </div>
 
         
         <ul class="nav ">
           <li>
-            <a class="nav-link" href="#">Comprar</a>
+            <a class="nav-link" href="index.php?action=comprar">Comprar</a>
           </li>
           <li>
             <a class="nav-link" href="index.php?action=vender">Vender</a>
