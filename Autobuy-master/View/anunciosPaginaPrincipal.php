@@ -48,7 +48,7 @@
                 </a>
               </div>
 
-              <a href="#">
+              <a href="index.php?action=anuncioOnix">
                 <div class="container">
                   <span class="modelo-anuncio">Chevrolet Onix</span>
                   <br>

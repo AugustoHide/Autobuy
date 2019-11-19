@@ -38,6 +38,9 @@ class controler
                     break;
 
             // só para testes
+            case 'anuncioOnix':
+                require 'View/paginaAnuncio.php';
+                break;
             case 'logar':
                 require 'View/paginaLogin.php';
                 break;
