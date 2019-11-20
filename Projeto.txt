@@ -15,14 +15,12 @@ Fazer pelo menos o principal até quarta-feira
 ->
 
 Terminar back end de:
-1.realizar login
-2.relarizar cadastrado.
-2.1. De usuário
-2.2. De anúncio
+relarizar cadastrado De anúncio
 
 
 Editar dados do usuário
 Excluir conta
+
 Gerenciar anúncios
 Editar dados do anúncio
 Exclui o anúncio
