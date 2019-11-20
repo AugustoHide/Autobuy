@@ -1,0 +1,35 @@
+Fazer pelo menos o principal até quarta-feira
+
+1) fazer banco de dados|Wellyngtton 
+
+2) fazer as páginas em html com o formulário. 
+
+ 2.2) criar tela para login/cadastro de informações de cliente Augusto 
+
+
+
+-> Terminar o login && implementar a busca simples| (Página principal) Filipe 
+-> página para cadastro de veículo(anúncio) Wellington && fazer o back-end
+-> página de catálogo/busca detalhada + pagina anuncio Augusto 
+-> adicionar js na pagina de erros bonus 
+->
+
+Terminar back end de:
+relarizar cadastrado De anúncio
+
+
+Editar dados do usuário
+Excluir conta
+
+Gerenciar anúncios
+Editar dados do anúncio
+Exclui o anúncio
+
+Busca detalhada
+Simulação de financiamento
+
+Encaixar o chat
+
+Fazer páginas pro ADM 
+1. Listar, e excluir usuários
+2. Listar e excluir anúncios
