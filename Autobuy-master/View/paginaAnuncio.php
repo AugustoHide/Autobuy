@@ -225,7 +225,7 @@
 
 					
 				</div>
-
+			</div>
 				<!-- ------------- ASIDE ------------- -->
 				<div id="boxConteudoAside"  class="borda col-sm-4">
 					<div class="asideConteudo card">
@@ -259,7 +259,7 @@
 					</div>
 				</div>
 
-					</div>
+					
 
 
 						
