@@ -33,8 +33,15 @@ class controler
             case 'financiamento':
                 require 'View/paginaFinanciamento.php';
                 break;
-            case 'listar-anuncio':
-                    require 'View/paginaListaAnuncio.php';
+            case 'criar-anuncio':
+                
+
+                if (!isset($_POST['marca'],$_POST['ano'],$_POST['cor'],$_POST['quilometragem'],$_POST['categoria'],$_POST['tipo'], $_POST['valor'])) {
+                    $_SESSION['status'] = 1;
+                } else {
+                    $anuncio = new anuncio($_POST['marca'],$_POST['ano'],$_POST['cor'],$_POST['quilometragem'],$_POST['categoria'], $_POST['tipo'], $_POST['valor']);
+                    $_SESSION['status'] = $this->factory->addAnuncio($anuncio);
+                }
                     break;
 
             // só para testes

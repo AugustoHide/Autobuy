@@ -10,7 +10,7 @@ class factory
         // Usar o banco de dados aqui fica mais facil pra fazer as modificações futuras
         // Create (connect to) SQLite database in file
         try{
-            $this->file_db = new PDO('sqlite:C:\wamp64\www\Autobuy-master\Autobuy-master\Model\DBAutobuy.sqlite');//muda aqui se quiser acessar teu bd
+            $this->file_db = new PDO('sqlite:C:\Users\user\Desktop\dm\Autobuy\Autobuy-master\Model\DBAutobuy.sqlite');//muda aqui se quiser acessar teu bd
         }catch(PDOException $ex){
             throw new PDO ( $ex->getMessage( ) , $ex->getCode( ) );
         }
@@ -29,20 +29,26 @@ class factory
 
         $this->file_db->exec("CREATE TABLE IF NOT EXISTS veiculo(
             idVeiculo integer PRIMARY KEY AUTOINCREMENT,
-            foto longblob NOT NULL,
             marca varchar(45) NOT NULL,
             ano date NOT NULL,
             cor varchar(45) NOT NULL,
             quilometragem integer NOT NULL,
             categoria varchar(45) NOT NULL,
             tipo varchar(45) NOT NULL)");
+        
+        $this->file_db->exec("CREATE TABLE IF NOT EXISTS imagens(
+            idImagem integer PRIMARY KEY AUTOINCREMENT,
+            foto longblob NOT NULL,
+            idVeiculo integer NOT NULL,
+            FOREIGN KEY (idVeiculo) REFERENCES 'veiculo' (idVeiculo))");
 
-        $this->file_db->exec("CREATE TABLE IF NOT EXISTS idAnuncio(
+        $this->file_db->exec("CREATE TABLE IF NOT EXISTS anuncio(
             idAnuncio integer PRIMARY KEY AUTOINCREMENT,
             idCliente integer NOT NULL,
             idVeiculo integer NOT NULL,
             descricao varchar NOT NULL,
             dataPublicacao date NOT NULL, 
+            valor real NOT NULL,
             FOREIGN KEY (idCliente) REFERENCES 'cliente' (idCliente),
             FOREIGN KEY (idVeiculo) REFERENCES 'veiculo' (idVeiculo))");
     }
@@ -93,6 +99,61 @@ class factory
             return 3;
         }
     }
+//
+    public function addAnuncio($anuncio)
+    {
+        try{
+        $insert = "INSERT INTO veiculo (idVeiculo, marca, ano, cor, quilometragem, categoria, tipo)
+        VALUES (null, :marca, :ano,:cor,:quilometragem, :categoria, :tipo)";
+      
+                $stmt = $this->file_db->prepare($insert);
+                $stmt->bindParam(':marca', $veiculo->marca);
+                $stmt->bindParam(':ano', $veiculo->ano);
+                $stmt->bindParam(':cor', $veiculo->cor);
+                $stmt->bindParam(':quilometragem', $veiculo->quilometragem);
+                $stmt->bindParam(':categoria', $veiculo->categoria);
+                $stmt->bindParam(':tipo', $veiculo->tipo);
+                $stmt->execute();
+              //TA DANDO ERRO AQUI
+              
+              
+            try {
+
+                $insert = "INSERT INTO anuncio (idAnuncio, idCliente, idVeiculo, descricao, dataPublicacao)
+                    VALUES (null, :idCliente, :idVeiculo,:descricao,:dataPublicacao)";
+                       
+                $stmt = $this->file_db->prepare($insert);
+                $stmt->bindParam(':idCliente', $anuncio->idCliente);
+                $stmt->bindParam(':idVeiculo', $anuncio->idVeiculo);
+                $stmt->bindParam(':descricao', $anuncio->descricao);
+                $stmt->bindParam(':dataPublicacao', $anuncio->dataPublicacao);
+                $stmt->execute();
+                return 0;
+
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return 2;
+            }
+
+
+    }
+
+
+        }
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function buscarClientes($email)
     {

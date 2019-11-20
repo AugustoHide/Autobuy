@@ -23,22 +23,33 @@
 					<input class="form-control" type="text" name="marca" placeholder="ex: Bmw, Fiat..">
 				</div>
 				<div class="form-goup formEmement">
-					<label>Tipo(modelo): </label>
-					<input class="form-control" type="text" name="tipo" placeholder="ex: Gol, Corsa ...">
-				</div>
-				<div class="form-goup formEmement">
 					<label>Ano: </label>
-					<input class="form-control" type="text" name="ano" placeholder="ex: 1997, 2015 ...">
+					<input class="form-control" type="text" name="ano" placeholder="ex: 2015, 2018">
 				</div>
 				<div class="form-goup formEmement">
-					<label>Versão: </label>
-					<input class="form-control" type="text" name="versao" placeholder="ex: 16V, 1.0 ...">
+					<label>Cor: </label>
+					<input class="form-control" type="text" name="cor" placeholder="ex: Preto, Azul metálico..">
+				</div>
+				<div class="form-goup formEmement">
+					<label>Quilometragem: </label>
+					<input class="form-control" type="text" name="quilometragem" placeholder="ex: 0KM, 50.000KM">
 				</div>
 				<br><br>
 				<div class="form-goup formEmement">
-					<label>Valor a anunciar: </label>
-					<input class="form-control" type="text" name="valor" placeholder="R$0,00">
+					<label>Categoria: </label>
+					<input class="form-control" type="text" name="categoria" placeholder="ex: Usado/Novo">
 				</div>
+
+				<div class="form-goup formEmement">
+					<label>Tipo(modelo): </label>
+					<input class="form-control" type="text" name="tipo" placeholder="ex: Hatch, Sedan">
+				</div>	
+
+				<div class="form-goup formEmement">
+					<label>Valor: </label>
+					<input class="form-control" type="text" name="valor" placeholder="ex: R$0,00">
+				</div>	
+
 				<br>
 				<button class="btn btn-primary" type="submit">Anuncie agora!</button>
 				<button class="btn btn-primary" type="reset">Limpar</button>
