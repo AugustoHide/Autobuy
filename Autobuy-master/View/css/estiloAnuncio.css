@@ -44,7 +44,7 @@
 	color: black;
 	box-shadow: 0rem 0rem 1rem white;
 }
-.detalhesVendedor{
+.avaliacao{
 	margin: 1.8rem 0rem;
 	padding: 1rem;
 	color: black;
@@ -65,4 +65,13 @@
 }
 .itemDescricao{
 	font-weight: lighter;
+}
+
+
+
+
+
+#carouselCarroParecido{
+	background-color: grey;
+	border: 1px solid green;
 }
