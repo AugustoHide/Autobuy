@@ -13,3 +13,12 @@ Fazer pelo menos o principal até quarta-feira
 -> página de catálogo/busca detalhada + pagina anuncio Augusto 
 -> adicionar js na pagina de erros bonus 
 ->
+
+
+Editar dados do usuário
+Excluir conta
+Gerenciar anúncios
+Editar dados do anúncio
+Exclui o anúncio
+
+Busca detalhada
