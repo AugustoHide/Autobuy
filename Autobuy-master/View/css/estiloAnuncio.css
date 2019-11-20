@@ -1,6 +1,4 @@
-.borda{
-	border: 1px green solid; 
-}
+
 
 #boxImagens{
 	background-color: grey;
@@ -73,5 +71,4 @@
 
 #carouselCarroParecido{
 	background-color: grey;
-	border: 1px solid green;
 }

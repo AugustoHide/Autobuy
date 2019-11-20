@@ -6,7 +6,7 @@
 		<title>Autobuy</title>
 		<?php include("includes/head.php"); ?>
 	</head>
-	<body>
+	<body class="borda">
 
 		<?php include("includes/js.php"); ?>
 	

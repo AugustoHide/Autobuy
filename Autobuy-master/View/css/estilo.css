@@ -1,5 +1,12 @@
 body{
-	background-color: black;
+	background-image: url('testeFundo2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.borda{
+	border: 1px solid green;
 }
 
 .floatLeft{

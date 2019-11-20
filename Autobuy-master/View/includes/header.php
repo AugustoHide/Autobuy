@@ -23,13 +23,19 @@
           <li>
             <a class="nav-link" href="#">Busca Detalhada</a>
           </li>
-    <?php
-      if (isset($_SESSION['usuario'])) {
-        $user['nome'] = $_SESSION['usuario'];
+        <?php
+          if (isset($_SESSION['usuario'])) {
+            $user['nome'] = $_SESSION['usuario'];
         ?>
-        <li><a class="nav-link" href="index.php?action=usuario"><?php echo $user['nome']; ?></a></li>
-        <li><a class="nav-link" href="index.php?action=sair">sair</a></li>
-        <?php }else{ ?>
+        <li>
+          <a class="nav-link" href="index.php?action=usuario"><?php echo $user['nome']; ?></a>
+        </li>
+        <li>
+          <a class="nav-link" href="index.php?action=sair">sair</a>
+        </li>
+        <?php 
+          }else{ 
+        ?>
           <li class="nav-link">|</li>
 
           <li>
@@ -39,7 +45,7 @@
 
           <a href="index.php?action=logar" class="nav-link">Logar</a>
         
-<?php }?>
+        <?php }?>
           </li>
         </ul>
       </div>
