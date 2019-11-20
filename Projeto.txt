@@ -22,3 +22,4 @@ Editar dados do anúncio
 Exclui o anúncio
 
 Busca detalhada
+Simulação de financiamento
