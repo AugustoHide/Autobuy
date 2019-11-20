@@ -14,6 +14,12 @@ Fazer pelo menos o principal até quarta-feira
 -> adicionar js na pagina de erros bonus 
 ->
 
+Terminar back end de:
+1.realizar login
+2.relarizar cadastrado.
+2.1. De usuário
+2.2. De anúncio
+
 
 Editar dados do usuário
 Excluir conta
@@ -23,3 +29,5 @@ Exclui o anúncio
 
 Busca detalhada
 Simulação de financiamento
+
+Encaixar o chat
