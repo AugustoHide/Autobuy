@@ -29,3 +29,7 @@ Busca detalhada
 Simulação de financiamento
 
 Encaixar o chat
+
+Fazer páginas pro ADM 
+1. Listar, e excluir usuários
+2. Listar e excluir anúncios
